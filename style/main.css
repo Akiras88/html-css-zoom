@@ -1,0 +1,106 @@
+/* GENERAL SETTING */
+* {
+  margin-left: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: #000;
+}
+
+/* LAYOUT */
+#top-bar {
+  width: 100%;
+  padding: 12px 15px 25px;
+  font-size: 12px;
+}
+#main-window {
+  flex-grow: 1;
+  width: 1600px,
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+#action-bar {
+  width: 100%;
+  padding: 15px;
+  background: #151515;
+}
+/* UTILITIES */
+.text-center {
+  text-align: center;
+}
+/*  HEADER STYLE */
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+}
+#top-bar .partecipants::after {
+  content: '';
+  display: inline-block;
+  border: 4px solid transparent;
+  border-top-color: #fff;
+  margin-left: 5px;
+  margin-top: 2px;
+  vertical-align: middle;
+}
+#top-bar .view-options {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+#top-bar .view-options a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background: #333;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+#top-bar .view-options .full-screen {
+  margin-left: 4px;
+}
+#top-bar .view-options .speaker-view i {
+  margin-right: 4px;
+}
+#top-bar .view-options .speaker-view a:hover {
+  color: red;
+}
+
+/* MAIN STYLE */
+#main-window .user {
+  position: relative;
+  flex-basis: 25%;
+  border: 3px solid #000;
+  padding-bottom: 10px;
+  transition: border .4s;
+}
+#main-window .user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#main-window .user:active {
+  border-color: lightgreen;
+}
+#main-window .user:hover {
+  border-color: rgba(255, 255, 255, 0.75);
+}
+#main-window .user .nome {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  background: rgba (0, 0, 0, 0.8);
+  padding: 2px 4px;
+  font-size: 12px;
+}
