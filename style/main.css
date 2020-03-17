@@ -29,6 +29,8 @@ body {
   width: 100%;
   padding: 15px;
   background: #151515;
+  display: flex;
+  justify-content: space-between;
 }
 /* UTILITIES */
 .text-center {
@@ -69,15 +71,14 @@ body {
 #top-bar .view-options .speaker-view i {
   margin-right: 4px;
 }
-#top-bar .view-options .speaker-view a:hover {
-  color: red;
-}
 
 /* MAIN STYLE */
 #main-window .user {
   position: relative;
   flex-basis: 25%;
   border: 3px solid #000;
+  width: 300px;
+  height: 300px;
   padding-bottom: 10px;
   transition: border .4s;
 }
@@ -89,18 +90,27 @@ body {
   height: 100%;
   object-fit: cover;
 }
-#main-window .user:active {
+#main-window .user.active {
   border-color: lightgreen;
 }
 #main-window .user:hover {
   border-color: rgba(255, 255, 255, 0.75);
 }
-#main-window .user .nome {
+#main-window .user.active .nome {
+  opacity: 1;
+}
+#main-window .user .nome,
+#main-window .user i {
   position: absolute;
   bottom: 0;
   left: 0;
   color: #fff;
-  background: rgba (0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   padding: 2px 4px;
   font-size: 12px;
+  opacity: 0;
+}
+#main-window .user.active .nome,
+#main-window .user:not(.active) {
+  opacity: 1;
 }
